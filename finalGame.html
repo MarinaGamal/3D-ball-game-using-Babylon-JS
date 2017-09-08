@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<style type="text/css">
+	@font-face { font-family: Test4; src: url('fonts/Test4.TTF'); } 
+	@font-face { font-family: Test5; src: url('fonts/Test5.ttf'); } 
+		html, body, #canvas, #canvasZone, #renderCanvas {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#container1 {
+  		position: relative;
+		}
+
+		#container2 {
+  		position: relative;
+		}
+
+		#container1 canvas, #score {
+		position: absolute;
+		right: 600px;
+		/* font: normal 38px/1 Impact, Charcoal, sans-serif; */
+		font-family:Test4;
+        font-size: 48px;
+		font-style:bold;
+		color: rgba(255,255,255,1);
+		-webkit-user-select: none;      
+        -moz-user-select: none; 
+        -ms-user-select: none;	
+		}
+
+		#container2 canvas, #wasted {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		/* font: normal 38px/1 Impact, Charcoal, sans-serif; */
+		font-family:Test5;
+        font-size: 48px;
+		font-style:bold;
+		color: rgba(150,0,0,1);
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		-webkit-user-select: none;      
+        -moz-user-select: none; 
+        -ms-user-select: none;	
+		}
+
+		#menuCanvas {
+			background-image:url('images/backgroundImage.jpg');
+		}
+		
+	</style>
+	<script src="js/babylon.max.js"></script>
+	<script src="js/cannon.max.js"></script>
+	<script src="js/finalGame.js"></script>
+
+</head>
+<body>
+		<div id="container1">
+			<canvas></canvas>
+		<div id="score" >Score: </div>
+		</div>
+
+		<div id="container2">
+			<canvas></canvas>
+		<div id="wasted" >WASTED</div>
+		</div>
+	<canvas id="menuCanvas" width="1600" height="1200"></canvas>
+	<canvas id="renderCanvas" width="1600" height="1200"></canvas>
+</body>
+</html>
